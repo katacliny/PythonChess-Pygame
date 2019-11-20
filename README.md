@@ -1,4 +1,4 @@
-# PyhtonChess-Pygame-
+# PyhtonChess-Pygame
 
 Run python chess.py
 
