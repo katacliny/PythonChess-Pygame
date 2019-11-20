@@ -1,4 +1,4 @@
-# PyhtonChess-Pygame
+# PythonChess-Pygame
 
 Install pygame https://www.pygame.org/news 
 
