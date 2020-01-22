@@ -1,3 +1,4 @@
+#test
 from pice import Piece
 from move import up, down, rigth, left, bishopDownRigth, bishopDownLeft, bishopUpRigth, bishopUpLeft
 
@@ -7,3 +8,4 @@ class Bishop(Piece):
         super(Bishop, self).__init__(posx, posy, table_map, "B", move=[bishopDownRigth, bishopDownLeft, bishopUpRigth, bishopUpLeft], color=color, rangelen=8  )
         self.posy = posx
         self.posx = posy
+
