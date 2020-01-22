@@ -1,6 +1,8 @@
+from handletablemove import HandlerTableMove
+
 class Piece:
     
-    def __init__(self, posx, posy, table_map, p_type="N", text_color=(0,0,0), move = []):
+    def __init__(self, posx, posy, table_map, p_type="N", text_color=(0,0,0), move = [], rangelen = 1, color = ()):
         self.posx = posx
         self.posy = posy
         self.table_map = table_map
@@ -9,9 +11,8 @@ class Piece:
         self.text_color = text_color
         self.is_selected = False
         self.move = move
-
-    def move(self):
-        pass
+        self.color = color
+        self.rangelen = rangelen
 
     def eat(self):
         pass
@@ -34,7 +35,10 @@ class Piece:
         mouseposs = py.mouse.get_pos()
         is_over_selected = [False, False]
         if mouseposs[0] > (pice.posx * 50) and mouseposs[0] < (pice.posx * 50) + 50 and mouseposs[1] > (pice.posy * 50) and mouseposs[1] < (pice.posy * 50) + 50:
-            if py.mouse.get_pressed()[0] is 1:
+            if py.mouse.get_pressed()[0] is 1 and not self.is_selected:
+                HandlerTableMove.setSelection(HandlerTableMove, (pice.posx, pice.posy, pice))
+                HandlerTableMove.table_map = self.table_map
+                HandlerTableMove.select(HandlerTableMove)
                 self.is_selected = True
             is_over_selected[0] = True
         else:

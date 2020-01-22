@@ -42,14 +42,14 @@ def mainThread():
     table.addPice(0, 7, Tower(0, 7, tower_color, table.table_map))
     
     
-    table.addPice(6, 0, Pawn(6, 0, pawn_color, table.table_map))
-    table.addPice(6, 1, Pawn(6, 1, pawn_color, table.table_map))
-    table.addPice(6, 2, Pawn(6, 2, pawn_color, table.table_map))
-    table.addPice(6, 3, Pawn(6, 3, pawn_color, table.table_map))
-    table.addPice(6, 4, Pawn(6, 4, pawn_color, table.table_map))
-    table.addPice(6, 5, Pawn(6, 5, pawn_color, table.table_map))
-    table.addPice(6, 6, Pawn(6, 6, pawn_color, table.table_map))
-    table.addPice(6, 7, Pawn(6, 7, pawn_color, table.table_map))
+    table.addPice(6, 0, Pawn(6, 0, pawn_color, table.table_map, True))
+    table.addPice(6, 1, Pawn(6, 1, pawn_color, table.table_map, True))
+    table.addPice(6, 2, Pawn(6, 2, pawn_color, table.table_map, True))
+    table.addPice(6, 3, Pawn(6, 3, pawn_color, table.table_map, True))
+    table.addPice(6, 4, Pawn(6, 4, pawn_color, table.table_map, True))
+    table.addPice(6, 5, Pawn(6, 5, pawn_color, table.table_map, True))
+    table.addPice(6, 6, Pawn(6, 6, pawn_color, table.table_map, True))
+    table.addPice(6, 7, Pawn(6, 7, pawn_color, table.table_map, True))
     
     table.addPice(7, 0, Tower(7, 0, tower_color, table.table_map))
     table.addPice(7, 1, Horse(7, 1, horse_color, table.table_map))
