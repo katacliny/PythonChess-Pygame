@@ -1,3 +1,4 @@
+#test
 from pice import Piece
 from move import up, down, rigth, left, bishopDownRigth, bishopDownLeft, bishopUpRigth, bishopUpLeft
 
