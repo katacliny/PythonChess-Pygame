@@ -1,4 +1,4 @@
-from pice import Piece
+from piece import Piece
 from move import up, down, rigth, left
 
 class Tower(Piece):

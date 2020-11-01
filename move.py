@@ -1,94 +1,94 @@
-def up(pice, rangelen, currentiteration=0):
+def up(piece, rangelen, currentiteration=0):
     positions = []
-    for y in range(pice.posy-rangelen, pice.posy):
+    for y in range(piece.posy-rangelen, piece.posy):
         if y > 0:
-            positions.append((pice.posx, y))
+            positions.append((piece.posx, y))
     return positions
 
 
-def down(pice, rangelen, currentiteration=0):
+def down(piece, rangelen, currentiteration=0):
     positions = []
-    for y in range(pice.posy + 1, pice.posy + rangelen + 1):
+    for y in range(piece.posy + 1, piece.posy + rangelen + 1):
         if y < 8:
-            positions.append((pice.posx, y))
+            positions.append((piece.posx, y))
     return positions
 
 
-def rigth(pice, rangelen, currentiteration=0):
+def rigth(piece, rangelen, currentiteration=0):
     positions = []
-    for x in range(pice.posx + 1, pice.posx + rangelen + 1):
+    for x in range(piece.posx + 1, piece.posx + rangelen + 1):
         if x < 8:
-            positions.append((x, pice.posy))
+            positions.append((x, piece.posy))
     return positions
 
 
-def left(pice, rangelen, currentiteration=0):
+def left(piece, rangelen, currentiteration=0):
     positions = []
-    for x in range(pice.posx-rangelen, pice.posx):
+    for x in range(piece.posx-rangelen, piece.posx):
         if x > 0:
-            positions.append((x, pice.posy))
+            positions.append((x, piece.posy))
     return positions
 
 
-def bishopDownRigth(pice, rangelen, currentiteration=0):
+def bishopDownRigth(piece, rangelen, currentiteration=0):
     positions = []
-    for x in range(pice.posy, pice.posy + rangelen + 1):
-        if pice.posx + x < 8 and pice.posy + x < 8:
-            positions.append((pice.posx + x, pice.posy + x))
+    for x in range(piece.posy, piece.posy + rangelen + 1):
+        if piece.posx + x < 8 and piece.posy + x < 8:
+            positions.append((piece.posx + x, piece.posy + x))
     return positions
 
 
-def bishopDownLeft(pice, rangelen, currentiteration=0):
+def bishopDownLeft(piece, rangelen, currentiteration=0):
     positions = []
-    for x in range(pice.posy, pice.posy + rangelen + 1):
-        if pice.posx - x >= 0 and pice.posy + x < 8:
-            positions.append((pice.posx - x, pice.posy + x))
+    for x in range(piece.posy, piece.posy + rangelen + 1):
+        if piece.posx - x >= 0 and piece.posy + x < 8:
+            positions.append((piece.posx - x, piece.posy + x))
     return positions
 
 
-def bishopUpRigth(pice, rangelen, currentiteration=0):
+def bishopUpRigth(piece, rangelen, currentiteration=0):
     positions = []
-    for x in range(pice.posy - rangelen, pice.posy):
-        if pice.posx + (abs(x)) < 8 and pice.posy - abs(x) >= 0:
-            positions.append((pice.posx + (abs(x)), pice.posy - abs(x)))
+    for x in range(piece.posy - rangelen, piece.posy):
+        if piece.posx + (abs(x)) < 8 and piece.posy - abs(x) >= 0:
+            positions.append((piece.posx + (abs(x)), piece.posy - abs(x)))
     return positions
 
 
-def bishopUpLeft(pice, rangelen, currentiteration=0):
+def bishopUpLeft(piece, rangelen, currentiteration=0):
     positions = []
-    for x in range(pice.posy - rangelen, pice.posy):
-        if pice.posx - (abs(x)) >= 0 and pice.posy - abs(x) >= 0:
-            positions.append((pice.posx - (abs(x)), pice.posy - abs(x)))
+    for x in range(piece.posy - rangelen, piece.posy):
+        if piece.posx - (abs(x)) >= 0 and piece.posy - abs(x) >= 0:
+            positions.append((piece.posx - (abs(x)), piece.posy - abs(x)))
     return positions
 
 
-def horseDownRigth(pice, rangelen, currentiteration=0):
+def horseDownRigth(piece, rangelen, currentiteration=0):
     positions = []
-    if pice.posx + 1 < 8 and pice.posy + rangelen < 8:
-        positions.append((pice.posx + 1, pice.posy + rangelen))
+    if piece.posx + 1 < 8 and piece.posy + rangelen < 8:
+        positions.append((piece.posx + 1, piece.posy + rangelen))
         
     return positions
 
 
-def horseDownLeft(pice, rangelen, currentiteration=0):
+def horseDownLeft(piece, rangelen, currentiteration=0):
     positions = []
-    if pice.posx - 1 >= 0 and pice.posy + rangelen < 8:
-        positions.append((pice.posx - 1, pice.posy + rangelen))
+    if piece.posx - 1 >= 0 and piece.posy + rangelen < 8:
+        positions.append((piece.posx - 1, piece.posy + rangelen))
         
     return positions
 
-def horseUpnLeft(pice, rangelen, currentiteration=0):
+def horseUpnLeft(piece, rangelen, currentiteration=0):
     positions = []
-    if pice.posx - 1 >= 0 and pice.posy - rangelen >= 0:
-        positions.append((pice.posx - 1, pice.posy - rangelen))
+    if piece.posx - 1 >= 0 and piece.posy - rangelen >= 0:
+        positions.append((piece.posx - 1, piece.posy - rangelen))
         
     return positions
 
 
-def horseUpnRigth(pice, rangelen, currentiteration=0):
+def horseUpnRigth(piece, rangelen, currentiteration=0):
     positions = []
-    if pice.posx + 1 < 8 and pice.posy - rangelen >= 0:
-        positions.append((pice.posx + 1, pice.posy - rangelen))
+    if piece.posx + 1 < 8 and piece.posy - rangelen >= 0:
+        positions.append((piece.posx + 1, piece.posy - rangelen))
         
     return positions
     

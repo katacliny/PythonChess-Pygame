@@ -1,4 +1,4 @@
-from pice import Piece
+from piece import Piece
 
 class WhiteSpace(Piece):
     
@@ -18,7 +18,7 @@ class Table:
                     [0, 0, 0, 0, 0, 0, 0, 0],
                     [0, 0, 0, 0, 0, 0, 0, 0],]
 
-    table_pices = []
+    table_pieces = []
     
     @staticmethod
     def getTableMap(cls):
@@ -29,21 +29,21 @@ class Table:
     def updateTableMap(cls, table_map):
         cls.table_map = table_map
 
-    def deletePice(self, pice):
-        self.table_pices.remove(pice)
+    def deletepiece(self, piece):
+        self.table_pieces.remove(piece)
 
-    def addPice(self, posy, posx, pice):
-        self.table_map[posx][posy] = pice
+    def addpiece(self, posy, posx, piece):
+        self.table_map[posx][posy] = piece
 
     def render(self, display, py, font):
         contx = 0
         conty = 0
         for row in self.table_map:
-            for pice in row:
-                if pice is 0:
+            for piece in row:
+                if piece == 0:
                     pass
                 else:
-                    pice.render(display, py, self.table_map, font)
+                    piece.render(display, py, self.table_map, font)
                 conty+=1
             contx += 1
             conty = 0

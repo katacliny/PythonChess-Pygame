@@ -2,11 +2,11 @@ from handletablemove import HandlerTableMove
 
 class Piece:
     
-    def __init__(self, posx, posy, table_map, p_type="N", text_color=(0,0,0), move = [], rangelen = 1, color = ()):
+    def __init__(self, posx: int, posy: int, table_map, p_type: str ="N", text_color: tuple =(0,0,0), move = [], rangelen: int = 1, color: tuple = ()):
         self.posx = posx
         self.posy = posy
         self.table_map = table_map
-        self.higthLight = (250, 0, 0)
+        self.higthLight = (250, 200, 100)
         self.p_type = p_type
         self.text_color = text_color
         self.is_selected = False
@@ -31,18 +31,18 @@ class Piece:
     def rangeAtackValidate(self):
         pass
     
-    def isOverSelected(self, py, pice):
+    def isOverSelected(self, py, piece):
         mouseposs = py.mouse.get_pos()
         is_over_selected = [False, False]
-        if mouseposs[0] > (pice.posx * 50) and mouseposs[0] < (pice.posx * 50) + 50 and mouseposs[1] > (pice.posy * 50) and mouseposs[1] < (pice.posy * 50) + 50:
-            if py.mouse.get_pressed()[0] is 1 and not self.is_selected:
-                HandlerTableMove.setSelection(HandlerTableMove, (pice.posx, pice.posy, pice))
+        if mouseposs[0] > (piece.posx * 50) and mouseposs[0] < (piece.posx * 50) + 50 and mouseposs[1] > (piece.posy * 50) and mouseposs[1] < (piece.posy * 50) + 50:
+            if py.mouse.get_pressed()[0] == 1 and not self.is_selected:
+                HandlerTableMove.setSelection(HandlerTableMove, (piece.posx, piece.posy, piece))
                 HandlerTableMove.table_map = self.table_map
                 HandlerTableMove.select(HandlerTableMove)
                 self.is_selected = True
             is_over_selected[0] = True
         else:
-            if py.mouse.get_pressed()[0] is 1:
+            if py.mouse.get_pressed()[0] == 1:
                 self.is_selected = False
             is_over_selected[0] = False
             

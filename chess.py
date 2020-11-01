@@ -1,6 +1,6 @@
 import pygame as py
 from table import Table
-from pice import Piece
+from piece import Piece
 from pawn import Pawn
 from queen import Queen
 from bishop import Bishop
@@ -23,42 +23,42 @@ pawn_color = (200, 200, 200)
 def mainThread():
     
     table = Table()
-    table.addPice(1, 0, Pawn(1, 0, pawn_color, table.table_map))
-    table.addPice(1, 1, Pawn(1, 1, pawn_color, table.table_map))
-    table.addPice(1, 2, Pawn(1, 2, pawn_color, table.table_map))
-    table.addPice(1, 3, Pawn(1, 3, pawn_color, table.table_map))
-    table.addPice(1, 4, Pawn(1, 4, pawn_color, table.table_map))
-    table.addPice(1, 5, Pawn(1, 5, pawn_color, table.table_map))
-    table.addPice(1, 6, Pawn(1, 6, pawn_color, table.table_map))
-    table.addPice(1, 7, Pawn(1, 7, pawn_color, table.table_map))
+    table.addpiece(1, 0, Pawn(1, 0, pawn_color, table.table_map))
+    table.addpiece(1, 1, Pawn(1, 1, pawn_color, table.table_map))
+    table.addpiece(1, 2, Pawn(1, 2, pawn_color, table.table_map))
+    table.addpiece(1, 3, Pawn(1, 3, pawn_color, table.table_map))
+    table.addpiece(1, 4, Pawn(1, 4, pawn_color, table.table_map))
+    table.addpiece(1, 5, Pawn(1, 5, pawn_color, table.table_map))
+    table.addpiece(1, 6, Pawn(1, 6, pawn_color, table.table_map))
+    table.addpiece(1, 7, Pawn(1, 7, pawn_color, table.table_map))
     
-    table.addPice(0, 0, Tower(0, 0, tower_color, table.table_map))
-    table.addPice(0, 1, Horse(0, 1, horse_color, table.table_map))
-    table.addPice(0, 2, Bishop(0, 2, bishop_color, table.table_map))
-    table.addPice(0, 3, King(0, 3, king_color, table.table_map))
-    table.addPice(0, 4, Queen(0, 4, quin_color, table.table_map))
-    table.addPice(0, 5, Bishop(0, 5, bishop_color, table.table_map))
-    table.addPice(0, 6, Horse(0, 6, horse_color, table.table_map))
-    table.addPice(0, 7, Tower(0, 7, tower_color, table.table_map))
+    table.addpiece(0, 0, Tower(0, 0, tower_color, table.table_map))
+    table.addpiece(0, 1, Horse(0, 1, horse_color, table.table_map))
+    table.addpiece(0, 2, Bishop(0, 2, bishop_color, table.table_map))
+    table.addpiece(0, 3, King(0, 3, king_color, table.table_map))
+    table.addpiece(0, 4, Queen(0, 4, quin_color, table.table_map))
+    table.addpiece(0, 5, Bishop(0, 5, bishop_color, table.table_map))
+    table.addpiece(0, 6, Horse(0, 6, horse_color, table.table_map))
+    table.addpiece(0, 7, Tower(0, 7, tower_color, table.table_map))
     
     
-    table.addPice(6, 0, Pawn(6, 0, pawn_color, table.table_map, True))
-    table.addPice(6, 1, Pawn(6, 1, pawn_color, table.table_map, True))
-    table.addPice(6, 2, Pawn(6, 2, pawn_color, table.table_map, True))
-    table.addPice(6, 3, Pawn(6, 3, pawn_color, table.table_map, True))
-    table.addPice(6, 4, Pawn(6, 4, pawn_color, table.table_map, True))
-    table.addPice(6, 5, Pawn(6, 5, pawn_color, table.table_map, True))
-    table.addPice(6, 6, Pawn(6, 6, pawn_color, table.table_map, True))
-    table.addPice(6, 7, Pawn(6, 7, pawn_color, table.table_map, True))
+    table.addpiece(6, 0, Pawn(6, 0, pawn_color, table.table_map, True))
+    table.addpiece(6, 1, Pawn(6, 1, pawn_color, table.table_map, True))
+    table.addpiece(6, 2, Pawn(6, 2, pawn_color, table.table_map, True))
+    table.addpiece(6, 3, Pawn(6, 3, pawn_color, table.table_map, True))
+    table.addpiece(6, 4, Pawn(6, 4, pawn_color, table.table_map, True))
+    table.addpiece(6, 5, Pawn(6, 5, pawn_color, table.table_map, True))
+    table.addpiece(6, 6, Pawn(6, 6, pawn_color, table.table_map, True))
+    table.addpiece(6, 7, Pawn(6, 7, pawn_color, table.table_map, True))
     
-    table.addPice(7, 0, Tower(7, 0, tower_color, table.table_map))
-    table.addPice(7, 1, Horse(7, 1, horse_color, table.table_map))
-    table.addPice(7, 2, Bishop(7, 2, bishop_color, table.table_map))
-    table.addPice(7, 3, King(7, 3, king_color, table.table_map))
-    table.addPice(7, 4, Queen(7, 4, quin_color, table.table_map))
-    table.addPice(7, 5, Bishop(7, 5, bishop_color, table.table_map))
-    table.addPice(7, 6, Horse(7, 6, horse_color, table.table_map))
-    table.addPice(7, 7, Tower(7, 7, tower_color, table.table_map))
+    table.addpiece(7, 0, Tower(7, 0, tower_color, table.table_map))
+    table.addpiece(7, 1, Horse(7, 1, horse_color, table.table_map))
+    table.addpiece(7, 2, Bishop(7, 2, bishop_color, table.table_map))
+    table.addpiece(7, 3, King(7, 3, king_color, table.table_map))
+    table.addpiece(7, 4, Queen(7, 4, quin_color, table.table_map))
+    table.addpiece(7, 5, Bishop(7, 5, bishop_color, table.table_map))
+    table.addpiece(7, 6, Horse(7, 6, horse_color, table.table_map))
+    table.addpiece(7, 7, Tower(7, 7, tower_color, table.table_map))
     
     while True: 
         for evento in py.event.get():
