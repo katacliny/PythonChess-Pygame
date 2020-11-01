@@ -2,10 +2,10 @@ from piece import Piece
 
 class WhiteSpace(Piece):
     
-    @staticmethod
-    def render(posx, posy, display, py, table_map):
-        
-        py.draw.rect(display, (200, 200, 200), (50 * posx, 50 * posy, 50, 50), True)
+    def __init__(self, posx, posy, color, table_map):
+        super(WhiteSpace, self).__init__(posx, posy, table_map, "W", move=[], color=color, rangelen=0)
+        self.posy = posx
+        self.posx = posy
 
 class Table:
     
@@ -41,7 +41,7 @@ class Table:
         for row in self.table_map:
             for piece in row:
                 if piece == 0:
-                    pass
+                    self.table_map[contx][conty] = WhiteSpace(conty, contx, (255,255,255), self.table_map)
                 else:
                     piece.render(display, py, self.table_map, font)
                 conty+=1

@@ -55,7 +55,7 @@ class Piece:
             m = x(self, self.rangelen)
             if m is not None:
                for n in m:
-                   if self.table_map[n[0]][n[1]] == 0:
+                   if self.table_map[n[0]][n[1]].p_type == 'W':
                         positions.append(n)
                    
         return positions
