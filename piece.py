@@ -18,10 +18,14 @@ class Piece:
         pass
 
     def render(self, display, py, table_map, font):
-        if self.is_selected:
+        
+        if self.is_selected and self.p_type != 'W':
             for pos in self.getPositions():
                     py.draw.rect(display, (255, 0, 0), (50 * pos[0], 50 * pos[1], 50, 50), True)
-        py.draw.rect(display, self.higthLight if self.isOverSelected(py, self)[0] or self.is_selected else self.color, (50 * self.posx, 50 * self.posy, 50, 50), False)
+        if self.p_type != 'W':
+            py.draw.rect(display, self.higthLight if self.isOverSelected(py, self)[0] or self.is_selected else self.color, (50 * self.posx, 50 * self.posy, 50, 50), False)
+        else:
+            self.isOverSelected(py, self)
         textsurface = font.render(self.p_type, False, self.text_color)
         display.blit(textsurface,(53 * self.posx, 50 * self.posy))
     

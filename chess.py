@@ -8,7 +8,7 @@ from tower import Tower
 from horse import Horse
 from king import King
 
-display = py.display.set_mode([400, 400])
+display = py.display.set_mode([800, 600])
 time = py.time.Clock()
 running = 1
 py.font.init() 
